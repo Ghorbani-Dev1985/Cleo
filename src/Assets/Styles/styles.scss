@@ -1,0 +1,53 @@
+@import "mixin_styles.scss";
+$mainFontFD: "Shabnam-FD";
+$mainFont: "Shabnam"; 
+$primaryColor: rgb(50,100,175);
+$borderRadiusSM: 5px;
+$borderRadiusMD: 7px;
+$borderRadiusLG: 10px;
+$borderRadiusXL: 15px;
+$solidBorder: 1px solid rgb(7, 50, 116);
+$p-5: 10px;
+$text-sm: 1.5rem;
+$text-md: 2.5rem;
+$text-lg: 3.5rem;
+$text-xl: 4.5rem;
+$text-2xl: 5.5rem;
+$text-3xl: 6.5rem;
+$text-4xl: 7.5rem;
+$cursor: pointer;
+$transition: all ease-in-out 300ms;
+
+html{
+    font-size: 62.50%;
+}
+
+header {
+    font-family: Helvetica, sans-serif;
+    background-color: lighten($baseColor, 50%);
+    border: 1px solid darken($baseColor , 50%);
+    color: $baseColor;
+    font-size: $text-2xl;
+}
+
+.subTitle{
+    background-color: $baseColor;
+    color: lighten($baseColor, 60%);
+    font-size: $text-2xl;
+    border-radius: $borderRadiusMD;
+    -webkit-border-radius: $borderRadiusMD;
+    -moz-border-radius: $borderRadiusMD;
+    -ms-border-radius: $borderRadiusMD;
+    -o-border-radius: $borderRadiusMD;
+    padding: $p-5;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    cursor: $cursor;
+    &:hover{
+         font-size: $text-4xl;
+    }
+    @include flex-center
+}

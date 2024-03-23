@@ -1,0 +1,21 @@
+@import './normalize.scss';
+@import './Font.scss';
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column
+}
+
+
+header{
+    @include flex-center;
+}
