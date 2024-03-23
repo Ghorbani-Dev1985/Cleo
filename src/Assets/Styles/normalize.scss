@@ -12,7 +12,7 @@ $legacy_support_for_ie: false !default; // Used also in Compass
 
 // Set the default font family here so you don't have to override it later
 $normalized_font_family: sans-serif !default;
-
+$secondaryColor: #F7E0DE;
 $normalize_headings: true !default;
 
 $h1_font_size: 2em !default;
@@ -49,7 +49,7 @@ hgroup,
 nav,
 section,
 summary {
-    display: block;
+    display: flex;
 }
 
 // Corrects inline-block display not defined in IE6/7/8/9 & FF3
@@ -102,13 +102,7 @@ html {
 
 // Addresses font-family inconsistency between 'textarea' and other form elements.
 
-html,
-button,
-input,
-select,
-textarea {
-    font-family: $normalized_font_family;
-}
+
 
 // Addresses margins handled incorrectly in IE6/7
 
@@ -129,7 +123,7 @@ a {
     // 1
     
     background: transparent;
-
+    text-decoration: none;
     // 2
 
     &:focus {
@@ -141,6 +135,7 @@ a {
     &:hover,
     &:active {
         outline: 0;
+        color: $secondaryColor;
     }
 }
 
@@ -335,6 +330,9 @@ nav {
     }
 }
 
+li{
+    list-style: none;
+}
 // =============================================================================
 // Embedded content
 // =============================================================================
@@ -519,3 +517,28 @@ input {
     	}
     }
 }
+
+//- global media vars
+
+$def:          320px;
+
+$xs:            480px;    // 480px @media (max-width: $xs) {}
+$sm:            640px;      // (min-width: 640px)
+$md:            768px;      // (min-width: 768px)
+$lg:            1024px;      // (min-width: 1024px)
+$xl:            1280px;      // (min-width: 1280px)
+
+//- to container
+$col-xs:        480px;  // (max-width: 480px)
+$col-sm:        640px;  // (max-width: 640px)
+$col-md:        768px;  // (max-width: 768px)
+$col-lg:        1024px;  // (max-width: 1024px)
+$col-xl:        1280px; // (max-width: 1280px)
+
+$breakpoints: (
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl
+);

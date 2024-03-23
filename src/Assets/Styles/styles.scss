@@ -1,53 +1,70 @@
 @import "mixin_styles.scss";
 $mainFontFD: "Shabnam-FD";
 $mainFont: "Shabnam"; 
-$primaryColor: rgb(50,100,175);
-$borderRadiusSM: 5px;
-$borderRadiusMD: 7px;
-$borderRadiusLG: 10px;
+$primaryColor: #415678;
+$secondaryColor: #F7E0DE;
+$rounded-sm: 0.125rem;
+$rounded-md: 0.375rem;
+$rounded-lg: 0.5rem;
+$rounded-xl: 0.75rem;
+$rounded-2xl: 1rem;
+$rounded-3xl: 1.5rem;
+$rounded-4xl: 2rem;
+$rounded-full: 9999px;
 $borderRadiusXL: 15px;
-$solidBorder: 1px solid rgb(7, 50, 116);
-$p-5: 10px;
-$text-sm: 1.5rem;
-$text-md: 2.5rem;
-$text-lg: 3.5rem;
-$text-xl: 4.5rem;
-$text-2xl: 5.5rem;
-$text-3xl: 6.5rem;
-$text-4xl: 7.5rem;
+$borderColor: #e7e7e7;
+$solidBorder: 1px solid $borderColor;
+$p-1: 0.25rem;
+$p-2: 0.5rem;
+$p-3: 0.75rem;
+$p-4: 1rem;
+$p-5: 1.25rem;
+$p-6: 1.5rem;
+$p-7: 1.75rem;
+$p-8: 2rem;
+$my-4: 1rem;
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 3rem;
 $cursor: pointer;
 $transition: all ease-in-out 300ms;
 
-html{
-    font-size: 62.50%;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $mainFontFD;
+    font-size: $text-lg;
+    color: $primaryColor;
+    direction: rtl;
 }
 
-header {
-    font-family: Helvetica, sans-serif;
-    background-color: lighten($baseColor, 50%);
-    border: 1px solid darken($baseColor , 50%);
-    color: $baseColor;
-    font-size: $text-2xl;
-}
 
-.subTitle{
-    background-color: $baseColor;
-    color: lighten($baseColor, 60%);
-    font-size: $text-2xl;
-    border-radius: $borderRadiusMD;
-    -webkit-border-radius: $borderRadiusMD;
-    -moz-border-radius: $borderRadiusMD;
-    -ms-border-radius: $borderRadiusMD;
-    -o-border-radius: $borderRadiusMD;
-    padding: $p-5;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
-    cursor: $cursor;
-    &:hover{
-         font-size: $text-4xl;
+header{
+    @include container;
+    @include flex-between;
+    padding: $p-4;
+    border: $solidBorder;
+    margin-top: 1.5rem;
+     img{
+        width: 5rem;
     }
-    @include flex-center
+    ul{
+        @include flex-center;
+    }
+    li{
+        padding: $p-3;
+    }
+    border-radius: $rounded-4xl;
+    -webkit-border-radius: $rounded-4xl;
+    -moz-border-radius: $rounded-4xl;
+    -ms-border-radius: $rounded-4xl;
+    -o-border-radius: $rounded-4xl;
 }
