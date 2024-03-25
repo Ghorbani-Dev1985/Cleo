@@ -1,0 +1,136 @@
+@use 'sass:math';
+
+$grid-cols: 12;
+
+// base layout classes
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include lg{
+        padding: 0.625rem;
+    }
+}
+
+// col classes
+@for $i from 1 through $grid-cols{
+    .grid-cols-#{$i}{
+        grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+}
+@include xs{
+    @for $i from 1 through $grid-cols{
+            .grid-cols-#{$i}-xs{
+                grid-template-columns: repeat($i, minmax(0, 1fr));
+            }
+    }
+}
+@include sm {
+    @for $i from 1 through $grid-cols{
+        .grid-cols-#{$i}-sm{
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+
+@include md{
+    @for $i from 1 through $grid-cols{
+        .grid-cols-#{$i}-md{
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+
+@include lg{
+    @for $i from 1 through $grid-cols{
+        .grid-cols-#{$i}-lg{
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $grid-cols{
+        .grid-cols-#{$i}-xl{
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+// row classes
+@include xs{
+    @for $i from 1 through $grid-cols{
+        .grid-rows-#{$i}-xs{
+            grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+@include sm {
+    @for $i from 1 through $grid-cols{
+        .grid-rows-#{$i}-sm{
+            grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+@include md{
+    @for $i from 1 through $grid-cols{
+        .grid-rows-#{$i}-md{
+            grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+@include lg{
+    @for $i from 1 through $grid-cols{
+        .grid-rows-#{$i}-lg{
+            grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $grid-cols{
+        .grid-rows-#{$i}-xl{
+            grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+    }
+}
+
+// col start/end
+@include xs{
+    @for $i from 1 through $grid-cols{
+        .col-span-#{$i}-xs{
+            grid-column: span $i / span $i;
+        }
+    }
+}
+
+@include sm{
+    @for $i from 1 through $grid-cols{
+        .col-span-#{$i}-sm{
+            grid-column: span $i / span $i;
+        }
+    }
+}
+
+@include md{
+    @for $i from 1 through $grid-cols{
+        .col-span-#{$i}-md{
+            grid-column: span $i / span $i;
+        }
+    }
+}
+
+@include lg{
+    @for $i from 1 through $grid-cols{
+        .col-span-#{$i}-lg{
+            grid-column: span $i / span $i;
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $grid-cols{
+        .col-span-#{$i}-xl{
+            grid-column: span $i / span $i;
+        }
+    }
+}
+

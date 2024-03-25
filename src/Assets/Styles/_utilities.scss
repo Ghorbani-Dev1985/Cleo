@@ -233,6 +233,7 @@ $utilities:(
         "none": none,
         "block": block,
         "flex": flex,
+        "grid": grid,
         "inline": inline,
         "inline-block": inline-block,
     )
@@ -250,6 +251,190 @@ $utilities:(
         "5xl": $font-size-5xl,
     )
    ),
+   "gap": (
+    "prefix": "gap",
+    "values": (
+        "0": 0,
+        "px": 1px,
+        "1": $base-gap,
+        "2": $base-gap * 2,
+        "3": $base-gap * 4,
+        "4": $base-gap * 6,
+        "5": $base-gap * 8,
+        "6": $base-gap * 10,
+        "7": $base-gap * 12,
+        "8": $base-gap * 14,
+        "9": $base-gap * 16,
+        "10": $base-gap * 18,
+        "11": $base-gap * 20,
+        "12": $base-gap * 22,
+        "13": $base-gap * 24,
+        "14": $base-gap * 26,
+    )
+   ),
+   "column-gap": (
+    "prefix": "gap-x",
+    "values": (
+        "0": 0,
+        "px": 1px,
+        "1": $base-gap,
+        "2": $base-gap * 2,
+        "3": $base-gap * 4,
+        "4": $base-gap * 6,
+        "5": $base-gap * 8,
+        "6": $base-gap * 10,
+        "7": $base-gap * 12,
+        "8": $base-gap * 14,
+        "9": $base-gap * 16,
+        "10": $base-gap * 18,
+        "11": $base-gap * 20,
+        "12": $base-gap * 22,
+        "13": $base-gap * 24,
+        "14": $base-gap * 26,
+    )
+   ),
+   "row-gap": (
+    "prefix": "gap-7",
+    "values": (
+        "0": 0,
+        "px": 1px,
+        "1": $base-gap,
+        "2": $base-gap * 2,
+        "3": $base-gap * 4,
+        "4": $base-gap * 6,
+        "5": $base-gap * 8,
+        "6": $base-gap * 10,
+        "7": $base-gap * 12,
+        "8": $base-gap * 14,
+        "9": $base-gap * 16,
+        "10": $base-gap * 18,
+        "11": $base-gap * 20,
+        "12": $base-gap * 22,
+        "13": $base-gap * 24,
+        "14": $base-gap * 26,
+    )
+   ),
+   "line-height": (
+    "prefix": "leading",
+    "values": (
+        "none": 1,
+        "sm": $base-leading * 2,
+        "md": $base-leading * 4,
+        "lg": $base-leading * 6,
+        "xl": $base-leading * 8,
+        "2xl": $base-leading * 10,
+        "3xl": $base-leading * 12,
+        "4xl": $base-leading * 14,
+        "5xl": $base-leading * 16,
+        "6xl": $base-leading * 18,
+        "7xl": $base-leading * 20,
+        "8xl": $base-leading * 22,
+        "9xl": $base-leading * 24,
+    )
+   ),
+   "text-align": (
+    "prefix": "text",
+    "values": (
+        "left": left,
+        "center": center,
+        "right": right,
+        "justify": justify,
+    )
+   ),
+   "text-decoration": (
+    "prefix": "text",
+    "values": (
+        "underline": underline,
+        "none": none,
+    )
+   ),
+   "text-transform": (
+    "prefix": "text",
+    "values": (
+        "uppercase": uppercase,
+        "lowercase": lowercase,
+        "capitalize": capitalize,
+        "none": none,
+    )
+   ),
+   "visibility": (
+    "prefix": "visible",
+    "values": (
+        "visible": visible,
+        "hidden": hidden,
+    )
+   ),
+   "z-index": (
+    "prefix": "z",
+    "values": (
+        "auto": auto,
+        "0": 0,
+        "10": 10,
+        "20": 20,
+        "30": 30,
+        "40": 40,
+        "50": 50,
+    )
+   ),
+   "transition": (
+    "prefix": "transition",
+    "values": (
+        "default": all 0.2s ease-in-out,
+    )
+   ),
+   "animation": (
+    "prefix": "animation",
+    "values": (
+        "default": all 0.2s ease-in-out,
+    )
+   ),
+   "cursor": (
+    "prefix": "cursor",
+    "values": (
+        "pointer": pointer,
+        "default": default,
+        "not-allowed": not-allowed,
+    )
+   ),
+   "overflow": (
+    "prefix": "overflow",
+    "values": (
+        "auto": auto,
+        "hidden": hidden,
+        "visible": visible,
+    )
+   ),
+   "position": (
+    "prefix": "position",
+    "values": (
+        "fixed": fixed,
+        "absolute": absolute,
+        "relative": relative,
+        "sticky": sticky,
+    )
+   ),
+   "user-select": (
+    "prefix": "user",
+    "values": (
+        "default": auto,
+        "none": none,
+    )
+   ),
+   "transform-origin": (
+    "prefix": "transform-origin",
+    "values": (
+        "default": center,
+        "top": top,
+        "top-right": top right,
+        "right": right,
+        "bottom-right": bottom right,
+        "bottom": bottom,
+        "bottom-left": bottom left,
+        "left": left,
+        "top-left": top left,
+    )
+   ),
+   
 );
 
 // generate utility classes
