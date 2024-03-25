@@ -251,69 +251,6 @@ $utilities:(
         "5xl": $font-size-5xl,
     )
    ),
-   "gap": (
-    "prefix": "gap",
-    "values": (
-        "0": 0,
-        "px": 1px,
-        "1": $base-gap,
-        "2": $base-gap * 2,
-        "3": $base-gap * 4,
-        "4": $base-gap * 6,
-        "5": $base-gap * 8,
-        "6": $base-gap * 10,
-        "7": $base-gap * 12,
-        "8": $base-gap * 14,
-        "9": $base-gap * 16,
-        "10": $base-gap * 18,
-        "11": $base-gap * 20,
-        "12": $base-gap * 22,
-        "13": $base-gap * 24,
-        "14": $base-gap * 26,
-    )
-   ),
-   "column-gap": (
-    "prefix": "gap-x",
-    "values": (
-        "0": 0,
-        "px": 1px,
-        "1": $base-gap,
-        "2": $base-gap * 2,
-        "3": $base-gap * 4,
-        "4": $base-gap * 6,
-        "5": $base-gap * 8,
-        "6": $base-gap * 10,
-        "7": $base-gap * 12,
-        "8": $base-gap * 14,
-        "9": $base-gap * 16,
-        "10": $base-gap * 18,
-        "11": $base-gap * 20,
-        "12": $base-gap * 22,
-        "13": $base-gap * 24,
-        "14": $base-gap * 26,
-    )
-   ),
-   "row-gap": (
-    "prefix": "gap-7",
-    "values": (
-        "0": 0,
-        "px": 1px,
-        "1": $base-gap,
-        "2": $base-gap * 2,
-        "3": $base-gap * 4,
-        "4": $base-gap * 6,
-        "5": $base-gap * 8,
-        "6": $base-gap * 10,
-        "7": $base-gap * 12,
-        "8": $base-gap * 14,
-        "9": $base-gap * 16,
-        "10": $base-gap * 18,
-        "11": $base-gap * 20,
-        "12": $base-gap * 22,
-        "13": $base-gap * 24,
-        "14": $base-gap * 26,
-    )
-   ),
    "line-height": (
     "prefix": "leading",
     "values": (
@@ -434,7 +371,7 @@ $utilities:(
         "top-left": top left,
     )
    ),
-   
+
 );
 
 // generate utility classes

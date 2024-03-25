@@ -1,136 +1,199 @@
-@use 'sass:math';
+@use "sass:math";
 
 $grid-cols: 12;
+$grid-gap: (
+  "0": 0,
+  "px": 1px,
+  "1": $base-gap,
+  "2": $base-gap * 2,
+  "3": $base-gap * 4,
+  "4": $base-gap * 6,
+  "5": $base-gap * 8,
+  "6": $base-gap * 10,
+  "7": $base-gap * 12,
+  "8": $base-gap * 14,
+  "9": $base-gap * 16,
+  "10": $base-gap * 18,
+  "11": $base-gap * 20,
+  "12": $base-gap * 22,
+  "13": $base-gap * 24,
+  "14": $base-gap * 26,
+);
+$justify-content: normal, start, end, center, between, around, evenly, stretch;
+$align-items: start, end, center, baseline, stretch;
 
 // base layout classes
-.container{
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
-    @include lg{
-        padding: 0.625rem;
-    }
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  @include lg {
+    padding: 0.625rem;
+  }
+}
+
+// grid gap
+@each $key, $val in $grid-gap {
+  .gap-#{$key} {
+    gap: $val;
+  }
+}
+@each $key, $val in $grid-gap {
+  .gap-x-#{$key} {
+    column-gap: $val;
+  }
+}
+@each $key, $val in $grid-gap {
+  .gap-y-#{$key} {
+    row-gap: $val;
+  }
+}
+
+// justify content classes
+
+@each $val in $justify-content {
+  .justify-#{$val} {
+    justify-content: $val;
+  }
+}
+
+// align items classes
+
+@each $val in $align-items {
+  .items-#{$val} {
+    align-items: $val;
+  }
 }
 
 // col classes
-@for $i from 1 through $grid-cols{
-    .grid-cols-#{$i}{
-        grid-template-columns: repeat($i, minmax(0, 1fr));
-    }
+@for $i from 1 through $grid-cols {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat($i, minmax(0, 1fr));
+  }
 }
-@include xs{
-    @for $i from 1 through $grid-cols{
-            .grid-cols-#{$i}-xs{
-                grid-template-columns: repeat($i, minmax(0, 1fr));
-            }
+
+@include xs {
+  @for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}-xs {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 @include sm {
-    @for $i from 1 through $grid-cols{
-        .grid-cols-#{$i}-sm{
-            grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
+  @for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}-sm {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 
-@include md{
-    @for $i from 1 through $grid-cols{
-        .grid-cols-#{$i}-md{
-            grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
+@include md {
+  @for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}-md {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 
-@include lg{
-    @for $i from 1 through $grid-cols{
-        .grid-cols-#{$i}-lg{
-            grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
+@include lg {
+  @for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}-lg {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+  }
 }
-@include xl{
-    @for $i from 1 through $grid-cols{
-        .grid-cols-#{$i}-xl{
-            grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
+@include xl {
+  @for $i from 1 through $grid-cols {
+    .grid-cols-#{$i}-xl {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 // row classes
-@include xs{
-    @for $i from 1 through $grid-cols{
-        .grid-rows-#{$i}-xs{
-            grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
+@for $i from 1 through $grid-cols {
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat($i, minmax(0, 1fr));
+  }
+}
+@include xs {
+  @for $i from 1 through $grid-cols {
+    .grid-rows-#{$i}-xs {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 @include sm {
-    @for $i from 1 through $grid-cols{
-        .grid-rows-#{$i}-sm{
-            grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
+  @for $i from 1 through $grid-cols {
+    .grid-rows-#{$i}-sm {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
     }
+  }
 }
-@include md{
-    @for $i from 1 through $grid-cols{
-        .grid-rows-#{$i}-md{
-            grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
+@include md {
+  @for $i from 1 through $grid-cols {
+    .grid-rows-#{$i}-md {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
     }
+  }
 }
-@include lg{
-    @for $i from 1 through $grid-cols{
-        .grid-rows-#{$i}-lg{
-            grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
+@include lg {
+  @for $i from 1 through $grid-cols {
+    .grid-rows-#{$i}-lg {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
     }
+  }
 }
-@include xl{
-    @for $i from 1 through $grid-cols{
-        .grid-rows-#{$i}-xl{
-            grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
+@include xl {
+  @for $i from 1 through $grid-cols {
+    .grid-rows-#{$i}-xl {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
     }
+  }
 }
 
 // col start/end
-@include xs{
-    @for $i from 1 through $grid-cols{
-        .col-span-#{$i}-xs{
-            grid-column: span $i / span $i;
-        }
+@for $i from 1 through $grid-cols {
+  .col-span-#{$i} {
+    grid-column: span $i / span $i;
+  }
+}
+@include xs {
+  @for $i from 1 through $grid-cols {
+    .col-span-#{$i}-xs {
+      grid-column: span $i / span $i;
     }
+  }
 }
 
-@include sm{
-    @for $i from 1 through $grid-cols{
-        .col-span-#{$i}-sm{
-            grid-column: span $i / span $i;
-        }
+@include sm {
+  @for $i from 1 through $grid-cols {
+    .col-span-#{$i}-sm {
+      grid-column: span $i / span $i;
     }
+  }
 }
 
-@include md{
-    @for $i from 1 through $grid-cols{
-        .col-span-#{$i}-md{
-            grid-column: span $i / span $i;
-        }
+@include md {
+  @for $i from 1 through $grid-cols {
+    .col-span-#{$i}-md {
+      grid-column: span $i / span $i;
     }
+  }
 }
 
-@include lg{
-    @for $i from 1 through $grid-cols{
-        .col-span-#{$i}-lg{
-            grid-column: span $i / span $i;
-        }
+@include lg {
+  @for $i from 1 through $grid-cols {
+    .col-span-#{$i}-lg {
+      grid-column: span $i / span $i;
     }
+  }
 }
-@include xl{
-    @for $i from 1 through $grid-cols{
-        .col-span-#{$i}-xl{
-            grid-column: span $i / span $i;
-        }
+@include xl {
+  @for $i from 1 through $grid-cols {
+    .col-span-#{$i}-xl {
+      grid-column: span $i / span $i;
     }
+  }
 }
-
