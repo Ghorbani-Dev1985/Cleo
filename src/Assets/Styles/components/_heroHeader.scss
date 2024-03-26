@@ -1,5 +1,5 @@
 header{
-    flex-direction: column;
+    @extend .flex-col;
     @include md{
         flex-direction: row;
     }
