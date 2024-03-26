@@ -8,9 +8,10 @@
     color: $primary;
     transition: $base-transition;
     .card-title{
-        font-size: $font-size-lg;
+        font-size: $font-size-2xl;
         padding-bottom: $base-padding;
         font-weight: bold;
+        margin: 1.5rem 0;
     }
     .card-body{
         font-size: $font-size-base;
