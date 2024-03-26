@@ -6,7 +6,7 @@ $error: #d32752 !default;
 $info: #f6c31c !default;
 $white: #fff !default;
 $black: #000 !default;
-
+$bg: #f8f8fc;
 // color palette
 $colors: (
   "primary": $primary,
@@ -66,3 +66,6 @@ $font-size-6xl: 3.75rem;
 
 //width
 $base-width: 0.125rem;
+
+//transition
+$base-transition: all ease-in-out 300ms;
