@@ -1,26 +1,35 @@
-.w-full{
-    width: 100%;
-}
-%flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-%flex-between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .navbar{
-    @extend %flex-between, .w-full;
+    @extend .flex-between, .w-full;
     padding: $base-padding $base-padding * 2;
-    box-shadow: $base-box-shadow;
     color: $primary;
     .site-title{
         font-size: $base-font-size;
         font-weight: bold;
     }
     .container{
-        @extend %flex-between
+        @extend .flex-between;
+    }
+    img{
+        width: 3rem;
+    }
+    ul{
+        display: none;
+        @include md{
+           display: flex;
+
+       }
+    }
+    li{
+        padding: 1rem;
+    }
+    .mobileNavBtn{
+        display: block;
+        @include md{
+            display: none;
+        }
+    }
+    .mobileNavBtn svg{
+        width: 2rem;
+        height: 2rem;
     }
 }

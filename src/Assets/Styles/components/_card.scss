@@ -14,6 +14,7 @@
     }
     .card-body{
         font-size: $base-font-size;
+        @extend .flex-center;
         a{
             text-decoration: underline;
             color: $secondary;

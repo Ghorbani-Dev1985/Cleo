@@ -17,6 +17,10 @@
   
   a {
     text-decoration: none;
+    transition: all ease-in-out 300ms;
+  }
+  a:hover{
+    color: $secondary;
   }
   
   hr {

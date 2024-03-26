@@ -1,6 +1,28 @@
 @use 'sass:math';
 
 $utilities:(
+    "width": (
+    "prefix": "w",
+    "values": (
+        "0": 0,
+        "px": 1px,
+        "1": $base-width * 2,
+        "3": $base-width * 4,
+        "4": $base-width * 6,
+        "5": $base-width * 8,
+        "6": $base-width * 10,
+        "7": $base-width * 12,
+        "8": $base-width * 14,
+        "9": $base-width * 16,
+        "10": $base-width * 18,
+        "11": $base-width * 20,
+        "12": $base-width * 22,
+        "13": $base-width * 24,
+        "14": $base-width * 26,
+        "16": $base-width * 28,
+
+    )
+   ),
    "padding": (
     "prefix": "p",
     "values": (
@@ -241,14 +263,16 @@ $utilities:(
    "font-size": (
     "prefix": "text",
     "values": (
+        "xs": $font-size-xs,
         "sm": $font-size-sm,
-        "md": $font-size-md,
+        "base": $font-size-base,
         "lg": $font-size-lg,
         "xl": $font-size-xl,
         "2xl": $font-size-2xl,
         "3xl": $font-size-3xl,
         "4xl": $font-size-4xl,
         "5xl": $font-size-5xl,
+        "6xl": $font-size-6xl,
     )
    ),
    "line-height": (
