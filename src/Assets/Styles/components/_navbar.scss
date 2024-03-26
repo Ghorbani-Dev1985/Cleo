@@ -1,4 +1,5 @@
 .navbar{
+    position: relative;
     @extend .flex-between, .w-full;
     padding: $base-padding $base-padding * 2;
     color: $primary;
@@ -12,14 +13,14 @@
     img{
         width: 3rem;
     }
-    ul{
+    .desktopNav ul{
         display: none;
         @include md{
            display: flex;
 
        }
     }
-    li{
+    .desktopNav li{
         padding: 1rem;
     }
     .mobileNavBtn{
@@ -32,4 +33,33 @@
         width: 2rem;
         height: 2rem;
     }
+    .mobileNav{
+        display: none;
+        @include md{
+           display: none;
+
+       }
+        background-color: $primary;
+        color: $white;
+        position: absolute;
+        right: 10px;
+        left: 10px;
+        margin: 0 auto;
+        top:80px;
+        padding: 15px;
+        border-radius: $base-border-radius;
+        z-index: 50;
+    }
 }
+.backdrop {
+    position: fixed;
+    display: none;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .open {
+    display: block !important;
+  }
