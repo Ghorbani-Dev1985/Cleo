@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img  src="./src/assets/Images/Logo/logo.webp" width="100" alt="ghorbani-dev.ir"/>
+    <img  src="./src/Assets/Images/logo.png" width="100" alt="ghorbani-dev.ir"/>
     <h2 align="center">Cleo | کلئو</h2>
   </a>
 </p>
