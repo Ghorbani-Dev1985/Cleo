@@ -1,0 +1,15 @@
+.arrowUp{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 10px;
+    bottom: 10px;
+    color: $white;
+    border: $base-border-thickness solid $white;
+    border-radius: 50%;
+    @extend .flex-center;
+    svg{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
